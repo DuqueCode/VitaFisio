@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/styles/main.css">
+</head>
+<body>
+    <form class="formulario">
+        <h2 class="titulo">Questionário de Desconforto Físico</h2>
+        <p class="descricao">
+            Este questionário nos ajuda a compreender melhor a intensidade e o impacto da dor no seu dia a dia. 
+            Com base nas suas respostas, podemos recomendar terapias mais adequadas para sua recuperação e bem-estar.
+        </p>
+
+        <label for="intensidade-dor" class="label">Qual a intensidade da sua dor? (0 a 10)</label>
+        <input type="number" id="intensidade-dor" class="input-campo" min="0" max="10" placeholder="Digite um número de 0 a 10">
+
+        <label for="local-dor" class="label">Em quais áreas do corpo você sente desconforto?</label>
+        <input type="text" id="local-dor" class="input-campo" placeholder="Ex: costas, pernas, ombros">
+
+        <label for="tipo-dor" class="label">Como você descreveria sua dor?</label>
+        <select id="tipo-dor" class="input-campo">
+            <option value="" disabled selected>Selecione uma opção</option>
+            <option value="pontada">Dor em pontada</option>
+            <option value="queimação">Sensação de queimação</option>
+            <option value="peso">Sensação de peso</option>
+            <option value="formigamento">Formigamento</option>
+            <option value="outra">Outra</option>
+        </select>
+
+        <label for="comentario" class="label">Comentário adicional</label>
+        <textarea id="comentario" class="textarea-campo" rows="4" placeholder="Descreva detalhes sobre sua dor"></textarea>
+
+        <button type="submit" class="btn primary">Enviar</button>
+    </form>
+</body>
+</html>
