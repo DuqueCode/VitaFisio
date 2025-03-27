@@ -1,0 +1,19 @@
+{
+  "forms": [
+    {
+      "name": "Avaliação Inicial",
+      "description": "A avaliação inicial é um passo fundamental para entender as condições físicas do paciente. Por meio dela, analisamos suas necessidades e criamos um plano de reabilitação personalizado, garantindo um tratamento mais eficiente e adequado.",
+      "src": "./forms/avaliacao-inicial.html"
+    },
+    {
+      "name": "Questionário de Desconforto Físico",
+      "description": "Este questionário nos ajuda a compreender melhor a intensidade e o impacto da dor no seu dia a dia. Com base nas suas respostas, podemos recomendar terapias mais adequadas para sua recuperação e bem-estar.",
+      "src": "./forms/questionario-desconforto.html"
+    },
+    {
+      "name": "Reagendamento",
+      "description": "Caso não tenha conseguido comparecer à sua sessão de fisioterapia, utilize este formulário para solicitar um novo horário. Nossa equipe entrará em contato para remarcar sua consulta.",
+      "src": "./forms/reagendamento.html"
+    }
+  ]
+}

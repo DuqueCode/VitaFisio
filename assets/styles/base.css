@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100dvh;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: clamp(35px, 4vw, 4vw);
+}
+
+h2 {
+    font-size: clamp(20px, 2.7vw, 2.7vw);
+    font-weight: 800;
+    border-bottom: solid 4px var(--primary-color);
+    width: fit-content;
+}
+
+.btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px -5px black;
+    border: 0;
+} 
+
+.btn.primary {
+    background-color: var(--primary-color);
+    color: var(--text-color-1);
+}
+
+main {
+    background-color: var(--background-2);
+    background-image: url("../images/main.design-detail.png");
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px 6dvw;
+    gap: 3dvw;
+}
+
+@media screen and (min-width: 700px) {
+    main div {
+        width: 50%;
+    }
+}
+
+main .main-image {
+    background-image: url("../images/main-image.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: padding-box;
+    height: 420px;
+}
+
+@media screen and (max-width: 699px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    main .main-image {
+        width: 100%;
+        height: 300px;
+    }
+    main .main-text, main .main-text p {
+        text-align: center;
+    }
+}
+
+main .main-text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+#praticas {
+    background-color: var(--background-4);
+}
+
+#agendamentos {
+    background-color: var(--background-2);
+
+}
+
+@media screen and (max-width: 699px) {
+    #praticas p {
+        font-size: 12px;
+    }
+}
+
+.forms{
+    background-color: var(--background-1);
+}
+
+.btn.secondary {
+    background-color: var(--background-3);
+}
+
+.endereco .inf, .contato .inf {
+    color: var(--text-color-2);
+    font-weight: 700;
+    font-size: 11px;
+}
+
+.endereco .label, .contato .label {
+    color: var(--text-color-2);
+}
+
+section {
+    padding: 30px 6dvw;
+}
+
+section, #agendamentos div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+#agendamentos > div {
+    width: 100%;
+    background-color: var(--background-1);
+    padding: 40px;
+    box-shadow: 0 1px 8px -5px black;
+    border-radius: 10px;
+}
+
+.forms ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.forms ul button {
+    box-shadow: 0 1px 8px -5px black;
+    width: 100%;
+    text-align: left;
+    transition: all 250ms;
+    border-bottom: 1px solid var(--stroke);
+    font-weight: 500;
+}
+
+.forms ul button:not(:hover) {
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding-left: 0;
+    font-weight: unset;
+}
+
+#agendamentos .forms {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#agendamentos .descricao {
+    background-color: var(--background-3);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px -5px black;
+    border-top: solid 3px var(--primary-color);
+}
+
+#agendamentos .forms ul, #agendamentos .forms .descricao {
+    width: 50%;
+}
+
+@media screen and (max-width: 699px) {
+    #agendamentos .forms ul {
+        width: 100%;
+    }
+    #agendamentos .descricao {
+        display: none;
+    }
+}
+
+section p {
+    text-align: center;
+}
+
+div p {
+    text-align: left;
+}
+
+#anchor {
+    padding: 2px;
+    background-color: var(--primary-color);
+    opacity: 0;
+    position: fixed;
+    bottom: -15px;
+    right: 15px;
+    border-radius: 50%;
+    transition: all 250ms ease;
+}
+
+#anchor.show {
+    bottom: 15px;
+    opacity: 0.5;
+}
+
+#anchor .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: solid 1px white;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+#anchor .icon::after {
+    content: "";
+    position: absolute;
+    top: auto;
+    left: auto;
+    width: 80%;
+    height: 80%;
+    background-image: url('../images/anchor-icon.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    filter: invert(1);
+}
+
+:root {
+    --primary-color: #14626C;
+    --stroke: rgba(199, 199, 199, 0.5);
+    --background-1: #F8F8F8;
+    --background-2: #F3F3F3;
+    --background-3: #FBFBFB;
+    --background-4: #E3E3E3;
+    --background-5: #d1d1d1;
+    --background-6: #c7c7c7;
+    --background-7: #bebebe;
+    --text-color-1: #ffffff;
+    --text-color-2: #69686D;
+    --text-color-3: #000000;
+}

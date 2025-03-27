@@ -1,0 +1,190 @@
+.container-praticas {
+    width: 1000px;
+    max-width: 100%;
+    transform-origin: top left;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.container-praticas > div {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: gray;
+    width: 180px;
+    height: 180px;
+    border-radius: 25px 8px 25px 8px;
+    box-shadow: 0 2px 10px -5px black;
+    border: solid 1px white;
+    transition: all 200ms;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.container-praticas > div span {
+    font-size: 12px;
+}
+
+@media screen and (max-width: 699px) {
+    .container-praticas > div {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.container-praticas > div .lg {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0), var(--color));
+    opacity: 0.25;
+    transition: all 500ms;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container-praticas > div .dk {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#00000033, #000000cc);
+    opacity: 0;
+    transition: all 500ms;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container-praticas > div:hover {
+    transform: scale(103%);
+}
+
+.container-praticas > div:hover .dk {
+    opacity: 1;
+}
+
+.container-praticas > div span {
+    position: absolute;
+    width: 100%;
+    color: white;
+    z-index: 1;
+    padding: 5px;
+    text-transform: uppercase;
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+    transition: all 500ms ease;
+}
+
+.container-praticas > div span::after {
+    font-size: 11px;
+    margin-top: 5px;
+    content: "";
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 500ms ease;
+    font-weight: 400;
+    text-transform: none;
+    color: white;
+}
+
+.container-praticas > div:hover span {
+    transform: translateY(-5px);
+}
+
+.container-praticas > div:hover span::after {
+    opacity: 1;
+    max-height: 100%;
+}
+
+.acupuntura {
+    --color: #178C94;
+    background-image: url('../../images/praticas/acunputura.jpeg');
+}
+.acupuntura:hover span::after {
+    content: 'Terapia milenar chinesa que utiliza agulhas para estimular pontos específicos do corpo e promover saúde integral.';
+}
+
+.ventosaterapia {
+    --color: #3DBABC;
+    background-image: url('../../images/praticas/ventosaterapia.jpeg');
+}
+.ventosaterapia:hover span::after {
+    content: 'Técnica que utiliza copos para criar sucção na pele, auxiliando na circulação, relaxamento e alívio de tensões.';
+}
+
+.reiki {
+    --color: #329583;
+    background-image: url('../../images/praticas/reiki.jpeg');
+}
+.reiki:hover span::after {
+    content: 'Método de imposição de mãos que equilibra a energia vital, promovendo relaxamento e bem-estar.';
+}
+
+.massoterapia {
+    --color: #83DDB9;
+    background-image: url('../../images/praticas/massoterapia.jpeg');
+}
+.massoterapia:hover span::after {
+    content: 'Aplicação de técnicas de massagem para melhorar a circulação, aliviar dores e reduzir o estresse muscular.';
+}
+
+.auriculoterapia {
+    --color: #178C94;
+    background-image: url('../../images/praticas/auriculoterapia.jpeg');
+}
+.auriculoterapia:hover span::after {
+    content: 'Estimulação de pontos na orelha para auxiliar no tratamento de dores e no equilíbrio do organismo.';
+}
+
+.reflexologia-podal {
+    --color: #3DBABC;
+    background-image: url('../../images/praticas/reflexologia_podal.jpeg');
+}
+.reflexologia-podal:hover span::after {
+    content: 'Pressão em pontos reflexos dos pés para estimular funções do corpo e proporcionar alívio e relaxamento.';
+}
+
+.fitoterapia-chinesa {
+    --color: #329583;
+    background-image: url('../../images/praticas/fitoterapia.jpeg');
+}
+.fitoterapia-chinesa:hover span::after {
+    content: 'Uso terapêutico de plantas medicinais para restaurar o equilíbrio energético e fortalecer a saúde.';
+}
+
+.terapia-coreana-das-maos {
+    --color: #83DDB9;
+    background-image: url('../../images/praticas/terapia_coreana.jpeg');
+}
+.terapia-coreana-das-maos:hover span::after {
+    content: 'Técnica que utiliza estímulos nas mãos para tratar dores e melhorar o funcionamento do organismo.';
+}
+
+.craniopuntura-de-yamamoto {
+    --color: #178C94;
+    background-image: url('../../images/praticas/craniocunputura.jpeg');
+}
+.craniopuntura-de-yamamoto:hover span::after {
+    content: 'Método que aplica agulhas no couro cabeludo para aliviar dores e tratar diversas condições físicas.';
+}
+
+.demais {
+    --color: #3DBABC;
+    background-image: url('../../images/praticas/demais_praticas.jpeg');
+}
+.demais:hover span::after {
+    content: 'Abordagens diversas que utilizam estímulos naturais para promover equilíbrio, relaxamento e bem-estar.';
+}
+
+.demais {
+    --color: #1F414A;
+    background-image: url('../../images/praticas/demais_praticas.jpeg');
+}
+.demais:hover span::after {
+    content: 'Abordagens diversas que utilizam estímulos naturais para promover equilíbrio, relaxamento e bem-estar.';
+}
