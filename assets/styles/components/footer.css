@@ -1,0 +1,82 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-4);
+}
+
+.footer-div {
+    width: 100%;
+    padding: 30px 6dvw;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+}
+
+.footer-div:not(.dev) {
+    padding: 60px 6dvw;
+}
+
+.footer-div h3 {
+    color: var(--text-color-2);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-div .endereco, .footer-div .contato {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.footer-div .inf, .footer-div .label {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.dev.footer-div {
+    font-weight: 900;
+    background-color: var(--background-2);
+}
+
+.dev.footer-div span {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    font-size: 12px;
+    color: var(--text-color-2);
+}
+
+.footer-div .logo {
+    background-image: url('../../../assets/images/logo-footer.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100px;
+    width: 50%;
+}
+
+.footer-div .footer-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+}
+
+.dev.footer-div span::after {
+    margin-top: -2px;
+    content: "- DESENVOLVEDOR -";
+    font-size: 10px;
+}
+
+@media screen and (max-width: 699px) {
+    .footer-div, .footer-div .footer-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+    }
+}

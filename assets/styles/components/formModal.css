@@ -1,0 +1,62 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s;
+    z-index: 1000;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    position: relative;
+    transform: scale(0.7);
+    transition: transform 0.3s ease;
+    height: 80dvh;
+    width: 50dvw;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    overflow: none;
+}
+
+@media screen and (max-width: 699px) {
+    .modal-content {
+        height: 100dvh;
+        width: 100dvw;
+        padding: 40px 15px;
+        border-radius: 0;
+    }
+}
+
+.modal-content iframe {
+    height: 100%;
+    width: 100%;
+}
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 1;
+}
