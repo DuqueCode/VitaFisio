@@ -13,7 +13,7 @@
     {
       "name": "Reagendamento",
       "description": "Caso não tenha conseguido comparecer à sua sessão de fisioterapia, utilize este formulário para solicitar um novo horário. Nossa equipe entrará em contato para remarcar sua consulta.",
-      "src": ".forms/reagendamento.html"
+      "src": "./forms/reagendamento.html"
     }
   ]
 }
